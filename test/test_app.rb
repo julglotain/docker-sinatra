@@ -17,4 +17,9 @@ class HelloWorldTest < Test::Unit::TestCase
     visit '/'
     assert page.has_content?('Hello from docker!')
   end
+
+  def test_it_works_with_name_param
+    visit '/docker!'
+    assert page.has_content?('Hello from docker!')
+  end
 end
